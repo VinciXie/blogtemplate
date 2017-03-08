@@ -45,6 +45,7 @@ var blogListTemplate = function({id, title, author, created_time}) {
     <div class="blog-list-item">
       <div data-id="${id}">${title}</div>
       <time>${time}</time>
+      <img src="img/blog/img${id}.png" alt="${title}">
     </div>
     `
     return t

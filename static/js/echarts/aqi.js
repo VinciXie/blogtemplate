@@ -35,10 +35,16 @@ var writeTheFile = function(s, fileName) {
   })
 }
 
-var url = 'http://www.pm25.com/rank.html'
-request(url, function (error, response, body) {
+var paqu = function() {
+  var url = 'http://www.pm25.com/rank.html'
+  request(url, function (error, response, body) {
     if (!error && response.statusCode == 200) {
-        // console.log(body);
-        aqiFromLi(body)
+      // console.log(body);
+      aqiFromLi(body)
     }
-})
+  })
+}
+
+paqu()
+
+setInterval(paqu(), 43200000)

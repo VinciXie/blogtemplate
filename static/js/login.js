@@ -23,6 +23,9 @@ var ajax = function(request) {
     }
 }
 
+var e = function(selector) {
+  return document.querySelector(selector)
+}
 
 var blogNew = function(form) {
     // var form = {

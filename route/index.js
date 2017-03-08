@@ -49,11 +49,23 @@ var demo = {
     }
 }
 
+
+var resume = {
+    path: '/resume',
+    method: 'get',
+    func: function(request, response) {
+        var path = 'resume.html'
+        sendHtml(path, response)
+    }
+}
+
+
 var routes = [
     index,
     blog_index,
     login,
     demo,
+    resume,
 ]
 
 module.exports.routes = routes
