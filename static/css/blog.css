@@ -26,6 +26,9 @@ html, body {
 body {
   background-color: #ededed; }
 
+a {
+  text-decoration: none;
+}
 .banner {
   height: 90px;
   /*background-image: url(../images/header.jpg);*/
@@ -35,14 +38,13 @@ body {
   text-align: center;
   background-color: rgb(43,43,43);
   overflow: hidden; }
-  .banner .title {
+  .banner > .title > a {
     font-size: 2.2rem;
     line-height: 84px;
     color: white;
     text-shadow: 2px 2px 3px #333; }
-    .banner .title .subtitle {
-      font-size: 60%; }
-
+    /*.banner .title .subtitle {
+      font-size: 60%; }*/
 .left-aside {
   position: fixed;
   top: 0;
@@ -50,6 +52,7 @@ body {
   padding-top: 90px;
   width: 300px;
 }
+
 nav {
   /*position: fixed;
   top: 90px;
@@ -64,7 +67,6 @@ nav {
     color: #eee;
   }
   nav a {
-    text-decoration: none;
     color: #444;
   }
   .touxiang > img {
@@ -74,6 +76,13 @@ nav {
     /*outline: 0 none;*/
     border: 1px solid #d071c5;
     border-radius: 50%; }
+  .personal-info {
+    margin: 80px auto;
+  }
+  .home > a {
+    display: inline-block;
+    padding-left: 5px;
+  }
   nav > .personal-info, .link {
     margin: 80px auto;
   }
@@ -81,7 +90,7 @@ nav {
     display: inline-block;
     height: 30px;
   }
-  .link > a + a {
+  .personal-info a + a {
     border-left: 1px solid #555;
   }
   .link img {
@@ -188,8 +197,28 @@ aside {
     display: none;
   }
 }
+pre {
+    background-color: #F8F8F8;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    overflow: auto;
+    padding: 5px;
+}
 
-.blog-new {
-  display: none; }
+pre code {
+    background-color: #F8F8F8;
+    border: none;
+    padding: 0;
+}
+
+code {
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    background-color:#F8F8F8;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    padding: 0 0.2em;
+    line-height: 1.2rem;
+}
+
 
 /*# sourceMappingURL=blog.css.map */

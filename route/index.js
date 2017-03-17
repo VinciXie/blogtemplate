@@ -20,6 +20,15 @@ var index = {
     }
 }
 
+var index1 = {
+    path: '/index1',
+    method: 'get',
+    func: function(request, response) {
+        var path = 'index1.html'
+        sendHtml(path, response)
+    }
+}
+
 var blog_index = {
     path: '/blog',
     method: 'get',
@@ -62,6 +71,7 @@ var resume = {
 
 var routes = [
     index,
+    index1,
     blog_index,
     login,
     demo,
