@@ -68,6 +68,16 @@ var resume = {
     }
 }
 
+var acheng = {
+    path: '/acheng',
+    method: 'get',
+    func: function(request, response) {
+        var path = 'acheng.html'
+        sendHtml(path, response)
+    }
+}
+
+
 
 var routes = [
     index,
@@ -76,6 +86,7 @@ var routes = [
     login,
     demo,
     resume,
+    acheng
 ]
 
 module.exports.routes = routes

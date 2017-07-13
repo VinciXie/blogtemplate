@@ -1,44 +1,46 @@
 jQuery(document).ready(function($) {
 
 	$('.scrollup').click(function(){
+		// 飛到頂部
 		$("html, body").animate({ scrollTop: 0 }, 1000);
 		return false;
 	});
 
-		$('.accordion').on('show', function (e) {
+	// $('.accordion').on('show', function (e) {
+	//
+	// 	$(e.target).prev('.accordion-heading').find('.accordion-toggle').addClass('active');
+	// 	$(e.target).prev('.accordion-heading').find('.accordion-toggle i').removeClass('icon-plus');
+	// 	$(e.target).prev('.accordion-heading').find('.accordion-toggle i').addClass('icon-minus');
+	// });
+	//
+	// $('.accordion').on('hide', function (e) {
+	// 	$(this).find('.accordion-toggle').not($(e.target)).removeClass('active');
+	// 	$(this).find('.accordion-toggle i').not($(e.target)).removeClass('icon-minus');
+	// 	$(this).find('.accordion-toggle i').not($(e.target)).addClass('icon-plus');
+	// });
 
-			$(e.target).prev('.accordion-heading').find('.accordion-toggle').addClass('active');
-			$(e.target).prev('.accordion-heading').find('.accordion-toggle i').removeClass('icon-plus');
-			$(e.target).prev('.accordion-heading').find('.accordion-toggle i').addClass('icon-minus');
-		});
-
-		$('.accordion').on('hide', function (e) {
-			$(this).find('.accordion-toggle').not($(e.target)).removeClass('active');
-			$(this).find('.accordion-toggle i').not($(e.target)).removeClass('icon-minus');
-			$(this).find('.accordion-toggle i').not($(e.target)).addClass('icon-plus');
-		});
-
-	$('.navigation').onePageNav({
-		begin: function() {
-			console.log('start');
-		},
-		end: function() {
-			console.log('stop');
-		},
-			scrollOffset: 0
-	});
+	// $('.navigation').onePageNav({
+	// 	begin: function() {
+	// 		console.log('start');
+	// 	},
+	// 	end: function() {
+	// 		console.log('stop');
+	// 	},
+	// 		scrollOffset: 0
+	// });
 
 	// prettyPhoto
-	$("a[data-pretty^='prettyPhoto']").prettyPhoto();
+	// $("a[data-pretty^='prettyPhoto']").prettyPhoto();
 
     // Localscrolling
 	$('#menu-main, .brand').localScroll();
 
-	$('#menu-main li a').click(function(){
-		var links = $('#menu-main li a');
-		links.removeClass('selected');
-		$(this).addClass('selected');
-	});
+	// $('#menu-main li a').click(function(){
+	// 	// 给选中的 a 添加 class
+	// 	var links = $('#menu-main li a');
+	// 	links.removeClass('selected');
+	// 	$(this).addClass('selected');
+	// });
 
     var iOS = false,
         p = navigator.platform;
