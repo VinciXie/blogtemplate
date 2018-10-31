@@ -3,10 +3,8 @@ var express = require('express')
 var app = express()
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-var bodyParser = require('body-parser')
 
-
-app.use(bodyParser.json())
+app.use(express.json())
 
 // 配置静态文件目录
 app.use(express.static('static'))
@@ -58,7 +56,7 @@ io.on('connection', function(socket){
 // 默认的端口是 80
 // 所以如果你监听 80 端口的话，浏览器就不需要输入端口了
 // 但是 1024 以下的端口是系统保留端口，需要管理员权限才能使用
-var server = http.listen(8081, function () {
+var server = http.listen(8082, function () {
   var host = server.address().address
   var port = server.address().port
 
